@@ -54,7 +54,7 @@ export const dataForCalculation: dataForCalculationType[] = [
   },
   {
     region: "Zlínský kraj",
-    averagegrossWage: 32644,
+    averagegrossWage: 31644,
   },
   {
     region: "Moravskoslezský kraj",

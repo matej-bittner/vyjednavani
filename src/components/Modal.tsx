@@ -36,7 +36,6 @@ const Modal = ({ isSucces }: { isSucces: boolean }) => {
 
         <select
           name="region"
-          id=""
           onChange={handleChange}
           className="rounded-md h-8 px-2 outline-none"
         >

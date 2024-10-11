@@ -38,10 +38,11 @@ const Card = ({ post, changeInput }: CardProps) => {
             <input
               ref={inputRef}
               type="number"
+              name="wage"
               className="bg-input placeholder:text-foreground p-1 rounded-md sm:p-1.5 outline-none"
               placeholder="32000 Kč"
             />
-            <Button type="submit">Uložit</Button>
+            <Button type="submit">Odeslat</Button>
           </form>
         ) : (
           <p className="font-semibold underline sm:text-lg">Částka uložena</p>
