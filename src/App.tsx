@@ -6,7 +6,7 @@ type postType = "employee" | "employer";
 
 function App() {
   const [wages, setWages] = useState({ employee: 0, employer: 0 });
-  const [isSucces, setIsSucces] = useState<boolean | undefined>();
+  const [isSuccess, setIsSuccess] = useState<boolean | undefined>();
 
   function changeInput(post: postType, wage: number) {
     if (post === "employee") {
@@ -19,16 +19,16 @@ function App() {
   useEffect(() => {
     if (wages.employee > 0 && wages.employer > 0) {
       if (wages.employee <= wages.employer) {
-        setIsSucces(true);
+        setIsSuccess(true);
       } else {
-        setIsSucces(false);
+        setIsSuccess(false);
       }
     }
   }, [wages]);
 
   return (
     <section className="w-full h-full min-h-[100svh]  px-4 py-6 lg:py-6 flex flex-col items-center gap-4 sm:gap-8 relative lg:gap-12 ">
-      {isSucces !== undefined && <Modal isSucces={isSucces} />}
+      {isSuccess !== undefined && <Modal isSuccess={isSuccess} wages={wages} />}
       <h1 className="text-3xl sm:text-4xl ">Vyjednávání</h1>
       <div className="flex max-md:flex-col gap-4 sm:gap-6 ">
         <Card post="employee" changeInput={changeInput} />
